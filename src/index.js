@@ -1,21 +1,21 @@
 import './style.css';
-import addData from './modules/addData';
+import addData from './modules/addData.js';
 
 const getData = async () => {
-    const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/4hUxjWxbhx8eZYEYlSSm/scores/');
-    const data = await res.json();
-    return data.result;
-}
+  const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/4hUxjWxbhx8eZYEYlSSm/scores/');
+  const data = await res.json();
+  return data.result;
+};
 
 const displayScore = (data) => {
-    const scores = document.querySelector('.scores');
-    scores.innerHTML = '';
-    data.forEach(({ user, score }) => {
-        const li = document.createElement('li');
-        li.textContent = `${user} : ${score}`;
-        scores.appendChild(li);
-    })
-}
+  const scores = document.querySelector('.scores');
+  scores.innerHTML = '';
+  data.forEach(({ user, score }) => {
+    const li = document.createElement('li');
+    li.textContent = `${user} : ${score}`;
+    scores.appendChild(li);
+  });
+};
 
 // Refresh score data on button click
 const refresh = document.querySelector('.refresh');
