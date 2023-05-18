@@ -6,3 +6,20 @@ const getData = async () => {
     const data = await res.json();
     return data.result;
 }
+
+const displayScore = (data) => {
+    const scores = document.querySelector('.scores');
+    scores.innerHTML = '';
+    data.forEach(({ user, score }) => {
+        const li = document.createElement('li');
+        li.textContent = `${user} : ${score}`;
+        scores.appendChild(li);
+    })
+}
+
+// Refresh score data on button click
+const refresh = document.querySelector('.refresh');
+refresh.addEventListener('click', async () => {
+  const data = await getData();
+  displayScore(data);
+});
