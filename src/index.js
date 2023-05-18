@@ -23,3 +23,12 @@ refresh.addEventListener('click', async () => {
   const data = await getData();
   displayScore(data);
 });
+
+// Add new score data on form submission
+const form = document.querySelector('.form');
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const { user, score } = form.elements;
+  await addData(user.value, score.value);
+  form.reset();
+});
