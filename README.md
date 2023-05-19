@@ -128,11 +128,11 @@ Example command:
 
 ### Setup
 
-Clone this repository to your desired folder:  cd my-folder  git clone git @https://github.com/bronnie313/leaderboard.git
+Clone this repository to your desired folder: ` cd my-folder  git clone git @https://github.com/bronnie313/leaderboard.git `
 
 ### Install
 
-Install this project with: cd leaderboard npm install
+Install this project with: ` cd leaderboard npm install `
 
 <!--
 Example command:
@@ -145,7 +145,7 @@ Example command:
 
 ### Usage
 
-To run the project, execute the following command: npm run build
+To run the project, execute the following command: ` npm run build `
 
 <!--
 Example command:
@@ -157,7 +157,7 @@ Example command:
 
 ### Run tests
 
-To run tests, run the following command: npm start
+To run tests, run the following command:` npm start `
 
 <!--
 Example command:
